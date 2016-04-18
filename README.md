@@ -1,7 +1,20 @@
-# Cmake SWIG Example
+# Cmake SWIG Python Extension
 ## Overview
 Just a simple example I have written for demonstrating how to use swig in
 cmake.
+
+## Build Instructions
+After installing needed dependencies, issuing:
+```bash
+mkdir build
+cmake -Bbuild -H.
+make -C build
+cd build/src
+python3 << EOF
+import example
+example.beep()
+EOF
+```
 
 ## License
 Copyright &copy; 2016 Jiahui Xie  

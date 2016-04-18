@@ -8,9 +8,15 @@ find_package(PythonLibs)
 
 set(CMAKE_SWIG_FLAGS "")
 
+file(GLOB EXAMPLE_SWIG_INTERFACE ${PROJECT_SOURCE_DIR}/include/*.i)
+
+set_source_files_properties(
+    ${EXAMPLE_SWIG_INTERFACE}
+    PROPERTIES C ON
+    SWIG_FLAGS "-includeall")
+
 include_directories(
     ${PYTHON_INCLUDE_PATH}
-    ${PROJECT_SOURCE_DIR}
     ${PROJECT_SOURCE_DIR}/include
     )
 
