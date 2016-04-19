@@ -9,12 +9,13 @@ After installing needed dependencies, issuing:
 mkdir build
 cmake -Bbuild -H.
 make -C build
-cd build/src
+sudo make -C build install
 python3 << EOF
 import example
 example.beep()
 EOF
 ```
+The generated *example* python module only works for python3.
 
 ## License
 Copyright &copy; 2016 Jiahui Xie  
